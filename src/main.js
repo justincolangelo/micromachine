@@ -25,7 +25,7 @@ const loadManifest = name => {
 
 loadManifest('micro-cats');
 loadManifest('micro-murray');
-loadManifest('micro-explore-devices');
+loadManifest('micro-text');
 
 
 

@@ -5,19 +5,19 @@
   "main": "index.js",
   "scripts": {
     "clean:dist": "rimraf dist",
-    "setup": "npm install && run-p setup:micro-cats setup:micro-murray setup:micro-explore-devices",
+    "setup": "npm install && run-p setup:micro-cats setup:micro-murray setup:micro-text",
     "setup:micro-cats": "cd micro-cats && npm install",
     "setup:micro-murray": "cd micro-murray && npm install",
-    "setup:micro-explore-devices": "cd micro-explore-devices && npm install",
+    "setup:micro-text": "cd micro-text && npm install",
     "start": "run-s clean:dist build:microfrontends start:dev",
     "start:dev": "webpack-dev-server --env.development --progress --open",
     "start:dist": "node server.js",
     "build": "run-s clean:dist build:prod build:microfrontends",
     "build:prod": "webpack --env.production",
-    "build:microfrontends": "run-p build:micro-cats build:micro-murray build:micro-explore-devices",
+    "build:microfrontends": "run-p build:micro-cats build:micro-murray build:micro-text",
     "build:micro-cats": "cd micro-cats && webpack --config webpack.prod.js",
     "build:micro-murray": "cd micro-murray && webpack --config webpack.prod.js",
-    "build:micro-explore-devices": "cd micro-explore-devices && webpack --config webpack.prod.js"
+    "build:micro-text": "cd micro-text && webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",

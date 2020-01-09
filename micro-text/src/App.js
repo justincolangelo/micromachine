@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export class App extends Component {
     state = {
-        hello: 'Micro Explore Devices'
+        hello: 'Micro Text'
     };
 
     render() {
