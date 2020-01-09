@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean:dist": "rimraf dist",
+    "setup": "npm install && run-p setup:micro-cats setup:micro-murray setup:micro-explore-devices",
+    "setup:micro-cats": "cd micro-cats && npm install",
+    "setup:micro-murray": "cd micro-murray && npm install",
+    "setup:micro-explore-devices": "cd micro-explore-devices && npm install",
     "start": "run-s clean:dist build:microfrontends start:dev",
     "start:dev": "webpack-dev-server --env.development --progress --open",
     "start:dist": "node server.js",

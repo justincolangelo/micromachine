@@ -1,7 +1,7 @@
 ### Micro front-ends with one main application. 
 
 ### Install
-* `npm install`
+* `npm run setup`
 
 ### Run
 * `npm start`
