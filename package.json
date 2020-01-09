@@ -1,0 +1,43 @@
+{
+  "name": "micromachines-web-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:dist": "rimraf dist",
+    "start": "run-s clean:dist build:microfrontends start:dev",
+    "start:dev": "webpack-dev-server --env.development --progress --open",
+    "start:dist": "node server.js",
+    "build": "run-s clean:dist build:prod build:microfrontends",
+    "build:prod": "webpack --env.production",
+    "build:microfrontends": "run-p build:micro-cats build:micro-murray build:micro-explore-devices",
+    "build:micro-cats": "cd micro-cats && webpack --config webpack.prod.js",
+    "build:micro-murray": "cd micro-murray && webpack --config webpack.prod.js",
+    "build:micro-explore-devices": "cd micro-explore-devices && webpack --config webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.32",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.32",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.32",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.32",
+    "@babel/preset-env": "^7.0.0-beta.32",
+    "@babel/preset-react": "^7.0.0-beta.32",
+    "@babel/runtime": "^7.0.0-beta.32",
+    "babel-loader": "^8.0.0-beta.0",
+    "express": "^4.16.3",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.9.0",
+    "npm-run-all": "^4.1.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-manifest-plugin": "^2.0.0-rc.2",
+    "webpack-merge": "^4.1.2"
+  }
+}
