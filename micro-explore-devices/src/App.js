@@ -8,8 +8,8 @@ export class App extends Component {
     render() {
         return (
             <div>
-                <h3>Title: {this.props.title}</h3>
-                <p>Greeting: {this.state.hello}</p>
+                <h3>{this.props.title}</h3>
+                <p>{this.state.hello}</p>
             </div>
         )
     }

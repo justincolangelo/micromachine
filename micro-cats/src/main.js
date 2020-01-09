@@ -3,6 +3,6 @@ import React from 'react'
 import { render } from 'react-dom';
 import { App } from './App';
 
-console.log('React 15 connected');
+console.log('Micro Cats Connected');
 
-render(<App title={'React 15 Separate Running App'}/>, document.getElementById('micro-cats-app'));
+render(<App title={'Micro Cats Connected'}/>, document.getElementById('micro-cats-app'));
