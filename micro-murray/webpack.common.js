@@ -4,7 +4,7 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 
 module.exports = {
     entry: {
-        'main': path.resolve(__dirname, 'src/micro-murray-app.js')
+        'main': path.resolve(__dirname, 'src/main.js')
     },
     resolve: {
         extensions: ['.js']
